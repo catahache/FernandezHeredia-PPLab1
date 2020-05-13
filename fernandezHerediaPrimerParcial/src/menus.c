@@ -220,7 +220,7 @@ int modificacionNotebook(int flagN, eNotebook listaN[], int tamN, eTipo listaT[]
 	}//if flagM == 1
 	else
 	{
-		printf("No hay musicos que modificar.\n");
+		printf("No hay que modificar.\n");
 
 	}
 
