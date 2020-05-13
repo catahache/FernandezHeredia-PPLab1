@@ -103,41 +103,26 @@ void alta(int* nextIdN, int* flagN, int* nextIdT, int* flagT, eTrabajo listaT[],
 //esta es la funcion que llamo en main para dar de baja:
 void baja(int flagN, eNotebook listaN[], int tamN, eMarca listaM[], int tamM, eTipo listaTipos[], int tamTipos)
 {
-	char continueS = 's';
-	char confirm;
+
 	int idN;
 
 
 	if(listaN != NULL && listaM != NULL && listaTipos != NULL)
 	{
-		do
+
+		if(flagN == 1)
 		{
-
-			if(flagN == 1)
+			mostrarNotebooks(listaN, tamN, listaTipos, tamTipos, listaM, tamM);
+			utn_getEntero(&idN, 3, "Ingrese el id del generico a eliminar: ", "Error,id no valido.\n", 1000, 1020);
+			if(bajaNotebook(idN, flagN, listaN, tamN, listaTipos, tamTipos, listaM, tamM)  == 1)
 			{
-				mostrarNotebooks(listaN, tamN, listaTipos, tamTipos, listaM, tamM);
-				utn_getEntero(&idN, 3, "Ingrese el id del generico a eliminar: ", "Error,id no valido.\n", 1000, 1020);
-				if(bajaNotebook(idN, flagN, listaN, tamN, listaTipos, tamTipos, listaM, tamM)  == 1)
-				{
-					printf("Se ha eliminado la notebook con exito.\n\n");
-				}
+				printf("Se ha eliminado la notebook con exito.\n\n");
 			}
-			else
-			{
-				printf("Error. No hay notebooks cargadas.\n");
-			}
-
-
-			printf("Continuar dando de baja? s/n: ");
-			fpurge(stdin);
-			scanf("%c", &confirm);
-			if(confirm == 'n')
-			{
-				continueS = 'n';
-			}
-
-
-		}while(continueS == 's');
+		}
+		else
+		{
+			printf("Error. No hay notebooks cargadas.\n");
+		}
 
 	}//if null
 }
