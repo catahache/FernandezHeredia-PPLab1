@@ -65,7 +65,7 @@ void alta(int* nextIdN, int* flagN, int* nextIdT, int* flagT, eTrabajo listaT[],
 			switch(menuAltas())
 			{
 				case 1:
-					if(altaNotebook(idN, listaN, tamN, listaTipo, tamTipo, listaM, tamM)  == 1)
+					if(altaNotebook(idN, listaN, tamN, listaTipo, tamTipo, listaM, tamM) == 1)
 					{
 						*nextIdN = idN++;
 						*flagN = 1;
@@ -353,7 +353,6 @@ int altaNotebook(int idX, eNotebook listaN[], int tamN, eTipo listaT[], int tamT
 				if(utn_getEntero(&listaN[indice].idMarca, 3, "Ingrese id marca: ", "El id ingresado no es valido.\n", 1000, 1003) == 0)
 				{
 					mostrarTipos(listaT, tamT);
-					fpurge(stdin);
 					if(utn_getEntero(&listaN[indice].idTipo, 3, "Ingrese id tipo: ", "El id ingresado no es valido.\n", 5000, 5003) == 0 &&
 						utn_getFlotante(&listaN[indice].precio, 3, "Ingrese precio de 5000 a 100000: ", "Error, el precio ingresado no es valido\n", 5000, 100000) == 0)
 					{
@@ -366,6 +365,7 @@ int altaNotebook(int idX, eNotebook listaN[], int tamN, eTipo listaT[], int tamT
 			}
 		}//if indice
 	}//if NULL
+
 	return todoOk;
 }
 
