@@ -82,7 +82,7 @@ void mostrarTrabajo(eTrabajo trabajo, eServicio listaS[], int tamS)
 
 void mostrarTrabajos(eTrabajo listaT[], int tamT, eServicio listaS[], int tamS)
 {
-	printf("ID   ID notebook     Descripcion      Fecha\n\n");
+	printf("ID   ID notebook     Servicio      Fecha\n\n");
 	for(int i = 0; i < tamS; i++)
 	{
 		if(listaT[i].isEmpty == 0)
