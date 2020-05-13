@@ -25,7 +25,7 @@ int menu()
 	printf("3. MODIFICACIONES\n");
 	printf("4. LISTAS\n");
 	printf("5. SALIR\n\n");
-	utn_getEntero(&opcion, 3, "Ingrese la opcion elegida: ", "Error, no es una opcion valida.\n", 1, 4);
+	utn_getEntero(&opcion, 3, "Ingrese la opcion elegida: ", "Error, no es una opcion valida.\n", 1, 5);
 
 	return opcion;
 
