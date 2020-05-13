@@ -353,13 +353,11 @@ int altaNotebook(int idX, eNotebook listaN[], int tamN, eTipo listaT[], int tamT
 				if(utn_getEntero(&listaN[indice].idMarca, 3, "Ingrese id marca: ", "El id ingresado no es valido.\n", 1000, 1003) == 0)
 				{
 					mostrarTipos(listaT, tamT);
-					if(utn_getEntero(&listaN[indice].idTipo, 3, "Ingrese id tipo: ", "El id ingresado no es valido.\n", 5000, 5003) == 0)
+					if(utn_getEntero(&listaN[indice].idTipo, 3, "Ingrese id tipo: ", "El id ingresado no es valido.\n", 5000, 5003) == 0 && utn_getFlotante(&listaN[indice].precio, 3, "Ingrese precio de 5000 a 100000: ", "Error, el precio ingresado no es valido\n", 5000, 100000) == 0)
 					{
-						utn_getFlotante(&listaN[indice].precio, 3, "Ingrese precio de 5000 a 100000: ", "Error, el precio ingresado no es valido\n", 5000, 100000);
-
-											listaN[indice].id = idX;
-											listaN[indice].isEmpty = 0; //lleno el lugar
-											todoOk = 1; //exito
+						listaN[indice].id = idX;
+						listaN[indice].isEmpty = 0; //lleno el lugar
+						todoOk = 1; //exito
 					}
 
 				}
