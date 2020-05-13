@@ -47,12 +47,12 @@ int main(void) {
 	char continueS = 's';
 	char confirm;
 
-	//Ids, crear tantos como estructuras existan:
+	//Ids
 	int nextIdN = 1000; //arranca en el 1000
 	int nextIdT = 1000;
 
 	//Flags Alta:
-	int flagN = 0; //ponerla en 1 para HARCODEAR
+	int flagN = 0;
 	int flagT = 0;
 
 	//Inicializar arrays:

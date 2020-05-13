@@ -186,7 +186,6 @@ int modificacionNotebook(int flagN, eNotebook listaN[], int tamN, eTipo listaT[]
 					do
 					{
 						system("clear");
-						//OJO agregar o sacar las opciones (capos de la estruct) necesarias:
 						printf("    1. Modificar precio\n");
 						printf("    2. Modificar tipo\n");
 						if(utn_getEntero(&opcion, 3, "Ingrese opcion a modificar: ", "Error, no es una opcion valida", 1, 2) == 0)
