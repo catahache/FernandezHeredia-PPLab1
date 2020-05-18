@@ -48,8 +48,8 @@ int main(void) {
 	char confirm;
 
 	//Ids
-	int nextIdN = 1000; //arranca en el 1000
-	int nextIdT = 1000;
+	//int nextIdN = 1000; //arranca en el 1000
+	//int nextIdT = 1000;
 
 	//Flags Alta:
 	int flagN = 0;
@@ -66,7 +66,7 @@ int main(void) {
 		switch(menu())
 		{
 			case 1:
-				alta(&nextIdN, &flagN, &nextIdT, &flagT, listaT, LENT, listaN, LENN, tipos, TAMTIPO, marcas, LENM, servicios, LENS);
+				alta( &flagN,  &flagT, listaT, LENT, listaN, LENN, tipos, TAMTIPO, marcas, LENM, servicios, LENS);
 				break;
 
 			case 2:

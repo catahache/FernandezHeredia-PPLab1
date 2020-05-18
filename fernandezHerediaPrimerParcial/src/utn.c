@@ -11,6 +11,8 @@
 #include <ctype.h>
 #include "utn.h"
 
+int isCuit(char str[]);
+
 //////////////////////// U T N    F U N C T I O N S /////////////////////////////
 
 void pause()
@@ -272,3 +274,21 @@ int normalizeStr(char* str)
 	}
 	return isOk;
 }
+
+int isCuit(char str[])
+{
+	int isOk = -1;
+	if((str[0] < '10' || str[0]> '-1') && (str[1] < '10' || str[1]> '-1') && (str[2] == '-' && str[11]== '-') &&(str[12] < '10' || str[12]> '-1'))
+	{
+		for(int i=3;i<11; i++)
+		{
+			if(str[i] < '10' || str[i]> '-1')
+			{
+				isOk=0;//exito
+			}
+		}
+	}
+	   return isOk;
+
+}
+

@@ -49,16 +49,16 @@ int menuAltas()
 }
 
 //esta es la funcion que llamo en main:
-void alta(int* nextIdN, int* flagN, int* nextIdT, int* flagT, eTrabajo listaT[], int tamT, eNotebook listaN[], int tamN,  eTipo listaTipo[], int tamTipo, eMarca listaM[], int tamM, eServicio listaS[], int tamS)
+void alta(int* flagN, int* flagT, eTrabajo listaT[], int tamT, eNotebook listaN[], int tamN,  eTipo listaTipo[], int tamTipo, eMarca listaM[], int tamM, eServicio listaS[], int tamS)
 {
 
 	char continueS = 's';
 	char confirm;
 
-	int idN = *nextIdN;
-	int idT = *nextIdT;
+	int idN = 1000;
+	int idT = 1000;
 
-	if(nextIdN != NULL && flagN != NULL && listaN != NULL && nextIdT != NULL && flagT != NULL && listaTipo != NULL && listaM != NULL && listaS != NULL)
+	if(flagN != NULL && listaN != NULL && flagT != NULL && listaTipo != NULL && listaM != NULL && listaS != NULL)
 	{
 		do
 		{
@@ -67,14 +67,14 @@ void alta(int* nextIdN, int* flagN, int* nextIdT, int* flagT, eTrabajo listaT[],
 				case 1:
 					if(altaNotebook(idN, listaN, tamN, listaTipo, tamTipo, listaM, tamM) == 1)
 					{
-						*nextIdN = idN++;
+						idN++;
 						*flagN = 1;
 					}
 					break;
 				case 2:
 					if(altaTrabajo(idT, listaT, tamT, listaN, tamN, listaS, tamS, listaM, tamM, listaTipo, tamTipo)  == 1)
 					{
-						*nextIdT = idT++;
+						idT++;
 						*flagT = 1;
 					}
 					break;

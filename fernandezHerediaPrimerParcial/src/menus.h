@@ -15,7 +15,7 @@
 
 int menu();
 int menuAltas();
-void alta(int* nextIdN, int* flagN, int* nextIdT, int* flagT, eTrabajo listaT[], int tamT, eNotebook listaN[], int tamN,  eTipo listaTipo[], int tamTipo, eMarca listaM[], int tamM, eServicio listaS[], int tamS);
+void alta(int* flagN, int* flagT, eTrabajo listaT[], int tamT, eNotebook listaN[], int tamN,  eTipo listaTipo[], int tamTipo, eMarca listaM[], int tamM, eServicio listaS[], int tamS);
 void baja(int flagN, eNotebook listaN[], int tamN, eMarca listaM[], int tamM, eTipo listaTipos[], int tamTipos);
 int modificacionNotebook(int flagN, eNotebook listaN[], int tamN, eTipo listaT[], int tamT, eMarca listaM[], int tamM);
 int menuListas();
